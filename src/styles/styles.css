@@ -7,27 +7,11 @@
 }
 
 .page-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 147px;
-    z-index: 100;
+    
 }
 
 .page-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(222, 222, 222, 0.50);
-    @supports (background-filter: blur(10px)) {
-        background-filter: blur(10px);
-        background-color: rgba(222, 222, 222, 0.50);
-    }
+    
 }
 
 .page-header_container,
@@ -45,39 +29,23 @@
 }
 
 .page-header_logo {
-    display: inline-block;
-    width: 202px;
-    height: 147px;
+    
 }
 
 .page-header_logo-img {
-    width: 100%;
-    height: 100%;
+    
 }
 
 .page-header_nav {
-    display: inline-block;
+    
 }
 
 .page-header_nav-link {
-    margin: 0 25px;
-    color: black;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
-    text-decoration: none;
+    
 }
 
 .page-header_user-btn {
-    box-sizing: border-box;
-    text-decoration: none;
-    padding: 15px 40px;
-    background-color: transparent;
-    border: 1px solid #1f1e1e;
-    font-size: 16px;
-    line-height: normal;
-    font-weight: 600;
-    color: #1f1e1e;
+    
 }
 
 .home {
@@ -94,7 +62,7 @@
     font-weight: 400;
     font-size: 45px;
     line-height: normal;
-    color: #1f1e1e;
+    color: @black;
 }
 
 .main-header_title {
@@ -153,7 +121,7 @@
     max-width: 624px;
     width: 100%;
     text-align: center;
-    background-color: #1f1e1e;
+    background-color: @black;
     text-transform: uppercase;
     font-family: "Lora";
     font-size: 36px;
@@ -223,7 +191,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: #1f1e1e;
+    color: @black;
     transition: color 0.2s, text-decoration-color 0.23s;
 }
 
@@ -233,7 +201,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    color: #1f1e1e;
+    color: @black;
 }
 
 .card-event_time {
@@ -242,7 +210,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    color: #1f1e1e;
+    color: @black;
 }
 
 .page-footer {
