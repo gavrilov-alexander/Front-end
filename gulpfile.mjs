@@ -7,7 +7,7 @@ import formatHTML from "gulp-format-html";
 
 import autoprefixer from "autoprefixer";
 import less from "gulp-less";
-import postcss from "postcss";
+import postcss from "gulp-postcss";
 import sortMediaQueries from "postcss-sort-media-queries";
 
 import minify from "gulp-csso";

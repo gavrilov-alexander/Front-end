@@ -62,7 +62,7 @@
     font-weight: 400;
     font-size: 45px;
     line-height: normal;
-    color: @black;
+    color: #1f1e1e;
 }
 
 .main-header_title {
@@ -121,7 +121,7 @@
     max-width: 624px;
     width: 100%;
     text-align: center;
-    background-color: @black;
+    background-color: #1f1e1e;
     text-transform: uppercase;
     font-family: "Lora";
     font-size: 36px;
@@ -191,7 +191,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    color: @black;
+    color: #1f1e1e;
     transition: color 0.2s, text-decoration-color 0.23s;
 }
 
@@ -201,7 +201,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    color: @black;
+    color: #1f1e1e;
 }
 
 .card-event_time {
@@ -210,7 +210,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    color: @black;
+    color: #1f1e1e;
 }
 
 .page-footer {
