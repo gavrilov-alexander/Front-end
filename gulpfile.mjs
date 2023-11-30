@@ -64,7 +64,26 @@ function style() {
             postcss([
                 autoprefixer({ overrideBrowserslist: ["last 4 version"] }),
                 sortMediaQueries({
-                    sort: "desktoop-first"
+                    sort: "desktop-first"
+                })
+            ])
+        )
+        .pipe(gulp.dest("dist/styles"))
+        .pipe(minify())
+        .pipe(rename("styles.min.css"))
+        .pipe(gulp.dest("dist/styles"));
+}
+
+function style2() {
+    return gulp
+        .src("src/styles/styles.less")
+        .pipe(plumber())
+        .pipe(less())
+        .pipe(
+            postcss([
+                autoprefixer({overrideBrowserslist: ["last 4 version"]}),
+                sortMediaQueries({
+                    sort: "desktop-first"
                 })
             ])
         )
@@ -152,6 +171,11 @@ const build = gulp.series (
     svgSprite
 )
 
+function reloadServer(done) {
+    server.reload();
+    done();
+}
+
 function serve() {
     server.init({
         server: "dist"
@@ -163,11 +187,6 @@ function serve() {
     gulp.watch(resources.static, { delay: 500 }, gulp.series(copy, reloadServer));
     gulp.watch(resources.images, { delay:500 }, gulp.series(images, reloadServer));
     gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
-}
-
-function reloadServer(done) {
-    server.reload();
-    done();
 }
 
 const start = gulp.series(build, serve);
