@@ -31,9 +31,14 @@ const resources = {
     less: "src/styles/**/*.less",
     static: [
         "src/assets/icons/**/*.*",
-        "src/assets/fonts/**/*.(woff,woff2)"
+        "src/assets/favicons/**/*.*",
+        "src/assets/fonts/**/*.(woff,woff2)",
+        "src/assets/video/**/*.{mp4,webm}",
+        "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
+        "src/json/**/*.json",
+        "src/php/**/*.php"
     ],
-    images: "src/assets/images/**/*.(png,jpg,jpeg,webp,gif,svg)",
+    images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gif,svg}",
     svgSprite: "src/assets/svg-sprite/*.svg"
 };
 
@@ -63,25 +68,6 @@ function style() {
         .pipe(
             postcss([
                 autoprefixer({ overrideBrowserslist: ["last 4 version"] }),
-                sortMediaQueries({
-                    sort: "desktop-first"
-                })
-            ])
-        )
-        .pipe(gulp.dest("dist/styles"))
-        .pipe(minify())
-        .pipe(rename("styles.min.css"))
-        .pipe(gulp.dest("dist/styles"));
-}
-
-function style2() {
-    return gulp
-        .src("src/styles/styles.less")
-        .pipe(plumber())
-        .pipe(less())
-        .pipe(
-            postcss([
-                autoprefixer({overrideBrowserslist: ["last 4 version"]}),
                 sortMediaQueries({
                     sort: "desktop-first"
                 })
@@ -135,7 +121,7 @@ function images() {
             imagemin([
                 imagemin_gifsicle({ interlaced: true }),
                 imagemin_mozjpeg({ quality: 100, progressive: true }),
-                imagemin_optipng({ oprimizationLavel: 3 })
+                imagemin_optipng({ optimizationLevel: 3 })
             ])
         )
         .pipe(gulp.dest("dist/assets/images"));

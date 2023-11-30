@@ -161,6 +161,41 @@ button {
   width: 100%;
   padding-top: 107.16%;
 }
+.listing {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.listing_events-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -30px -120px;
+}
+.listing_event-card {
+  width: calc(33.333% - 60px);
+  margin: 0 30px 120px;
+}
+.events {
+  padding: 140px 0 100px;
+}
+.events_listing {
+  margin-bottom: 100px;
+}
 .page-header {
   position: fixed;
   top: 0;
@@ -190,8 +225,8 @@ button {
           box-sizing: border-box;
   width: 100%;
   max-width: 1414px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
   position: relative;
@@ -242,8 +277,8 @@ button {
           box-sizing: border-box;
   width: 100%;
   max-width: 1414px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
 }
