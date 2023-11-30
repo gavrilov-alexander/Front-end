@@ -1,0 +1,42 @@
+.event-card {
+    display: flex;
+    width: 405px;
+    max-width: 100%;
+    min-width: 280px;
+    color: @black;
+
+    &_link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none;
+        &:active {
+            .event-card_title {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
+        &:hover .event-card_title {
+            @media (hover: hover) {
+                color: @red;
+                text-decoration: @red;
+            }
+        }
+    }
+    &_picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 0 25px;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 107.160%;
+        }
+    }
+}

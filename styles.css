@@ -1,9 +1,6 @@
 .body {
     font-family: "Open Sans", "sans-serif";
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.375;
+    
 }
 
 .page-header {
@@ -142,16 +139,11 @@
 }
 
 .card-event {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .card-event_link {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    
 }
 
 .card-event_link:hover .card-event_title {
@@ -160,16 +152,11 @@
 }
 
 .card-event_picture {
-    position: relative;
-    display: block;
-    margin-bottom: 25px;
+    
 }
 
 .card-event_picture::before {
-    content: "";
-    display: block;
-    width: 100%;
-    padding-top: 107.160%;
+    
 }
 
 .card-event_picture-img {
